@@ -7,13 +7,24 @@
 </head>
 <body>
     <div>
-        <img src="/images/pu1.jpg">
+        <img src="/images/pu1.jpg" id="result">
     </div>
-    <button>Next</button>
+    <button onclick="change()">Next</button>
 
     <script>
+        const result = document.getElementById("result");
         let ar = ["pu1.jpg", "pu2.jpg", "pu3.jpg", "pu4.jpg", "pu5.jpg"];
+        let i=1;
 
+        function change(){
+            if(i>4){
+                alert('마지막이미지');
+                i=0;
+            }
+            result.src="/images/"+ar[i];
+            i++;
+            
+        }
         
 
     </script>

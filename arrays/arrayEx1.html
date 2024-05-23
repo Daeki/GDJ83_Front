@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="checkbox" value="1" id="checkAll" name="ch">
+    <input onclick="info()" type="checkbox" value="1" id="checkAll" name="ch">
     <input type="checkbox" value="1" class="ch" name="ch">
     <input type="checkbox" value="2" class="ch" name="ch">
     <input type="checkbox" value="3" class="ch" name="ch">
@@ -15,15 +15,27 @@
 
     <script>
         const ch = document.getElementsByClassName("ch");
+        const checkAll = document.getElementById("checkAll");
 
         function info(){
 
             for(let i=0;i<ch.length;i++){
-                console.log(ch[i].checked);
+                ch[i].checked=checkAll.checked;
             }
+
+            // if(checkAll.checked){
+
+            //     for(let i=0;i<ch.length;i++){
+            //         ch[i].checked=checkAll.checked;
+            //     }
+            // }else {
+            //     for(let i=0;i<ch.length;i++){
+            //         ch[i].checked=checkAll.checked;
+            //     }
+            // }
         }
 
-        ch[1].checked=false;
+       
 
     </script>
 
